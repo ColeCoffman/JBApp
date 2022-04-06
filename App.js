@@ -7,6 +7,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import  {DrawerComponent} from './components/DrawerNavigator';
 import { HomeScreen } from './Screens/HomeScreen';
 import { EventScreen } from './Screens/EventScreen';
+import { BrowserScreen } from './Screens/BrowserScreen';
 
 
 
@@ -40,9 +41,8 @@ function MyDrawer() {
         headerTitle: (props) => <LogoTitle {...props} />,
       }}
        />
-      <Drawer.Screen name="Events"
-      component={EventScreen}
-       />
+      <Drawer.Screen name="Events" component={EventScreen}/>
+      <Drawer.Screen name="Browser" component={BrowserScreen} />
     </Drawer.Navigator>
   );
 }
