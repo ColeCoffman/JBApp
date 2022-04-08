@@ -1,12 +1,12 @@
 
-import {View, Text, Pressable, ActivityIndicator, Button, StyleSheet, Modal, TouchableOpacity, Dimensions} from 'react-native';
+import {View, ScrollView, Text, Pressable, ActivityIndicator, Button, StyleSheet, Modal, TouchableOpacity, Dimensions} from 'react-native';
 import EventCalendar from 'react-native-events-calendar'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React, { useState, useEffect } from 'react';
 
 let { width } = Dimensions.get('window')
 
-function EventScreen({navigation}) {
+function MainEventScreen({navigation}) {
     const [isLoading, setIsLoading] = React.useState(true);
     const [events, setEvents] = React.useState([]);
     const [modalVisible, setModalVisible] = useState(false);
@@ -28,10 +28,9 @@ function EventScreen({navigation}) {
       }).catch((error) => {
         console.error(error);
       });
-      console.log("Refreshed");
     }
   
-    EventScreen.refreshEvents = refreshEvents;
+    MainEventScreen.refreshEvents = refreshEvents;
   
     React.useLayoutEffect(() => {
       navigation.setOptions({
@@ -49,6 +48,7 @@ function EventScreen({navigation}) {
     }, [JSON.stringify(events)])
   
     function handleEventPress(event){
+      console.log(event);
       setSelectedEvent(event);
       setModalVisible(true);
     }
@@ -71,11 +71,39 @@ function EventScreen({navigation}) {
                   <Icon name='close' size={30} color='black' />
                 </TouchableOpacity>
               </View>
-              <View style={styles.modalContent}>
-                  <Text style={{fontWeight: 'bold'}}> Time: 
-                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['start']}</Text>
+              <ScrollView style={styles.modalContent}>
+                  {selectedEvent['Time'] != null &&
+                  <Text style={styles.label}> Time: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Time']}</Text>
                   </Text>
-              </View>
+                  }
+                  {selectedEvent['Location'] != null &&
+                  <Text style={styles.label}> Location: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Location']}</Text>
+                  </Text>
+                  }
+                  {selectedEvent['Sponsored By'] != null && 
+                    <Text style={styles.label}> Sponsored By: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Sponsored By']}</Text>
+                  </Text>
+                  }
+                  {selectedEvent['Powered By'] != null && 
+                    <Text style={styles.label}> Powered By: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Powered By']}</Text>
+                  </Text>
+                  }
+                  {selectedEvent['description'] != null && 
+                    <Text style={styles.label}> Description: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['description']}</Text>
+                  </Text>
+                  }
+                  {selectedEvent['Register'] != null && 
+                    <Text style={styles.label}> Register: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Register']}</Text>
+                  </Text>
+                  }
+
+              </ScrollView>
             </View>
           </Pressable>
         </Modal>
@@ -140,7 +168,10 @@ function EventScreen({navigation}) {
     outsideModal: {
       backgroundColor: "rgba(1, 1, 1, 0.2)",
       flex: 1,
+    },
+    label: {
+      fontWeight: "bold",
     }
   });
 
-export {EventScreen};
+export {MainEventScreen};
