@@ -1,0 +1,61 @@
+
+<!-- saved from url=(0041)http://74.208.239.191/mobilej/s_list.aspx -->
+<html><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+
+Object.defineProperty(window, 'source', {
+	set (v) {
+		const url = new URL(location.protocol + location.hostname + v);
+		const key = url.searchParams.get('allb');
+		if (key && (key.indexOf('http://') === 0 || key.indexOf('https://') === 0)) {
+			document.write('<!--');
+			window.stop();
+			
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	},
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>[{"ID":90,"snum":"0180105"},{"ID":87,"snum":"0181306"},{"ID":58,"snum":"0181581"},{"ID":80,"snum":"0538259"},{"ID":92,"snum":"0538590"},{"ID":103,"snum":"0538865"},{"ID":71,"snum":"0539482"},{"ID":63,"snum":"0589481"},{"ID":68,"snum":"0602143"},{"ID":82,"snum":"0604898"},{"ID":108,"snum":"0605201"},{"ID":61,"snum":"0605804"},{"ID":95,"snum":"0605998"},{"ID":109,"snum":"0696080"},{"ID":78,"snum":"0809206"},{"ID":106,"snum":"0809672"},{"ID":105,"snum":"0809673"},{"ID":101,"snum":"0809686"},{"ID":88,"snum":"081306"},{"ID":93,"snum":"0815238"},{"ID":98,"snum":"0815307"},{"ID":89,"snum":"0815758"},{"ID":64,"snum":"0816059"},{"ID":79,"snum":"0816787"},{"ID":97,"snum":"0817806"},{"ID":73,"snum":"0817832"},{"ID":110,"snum":"0817871"},{"ID":84,"snum":"0831368"},{"ID":112,"snum":"0831604"},{"ID":107,"snum":"0831641"},{"ID":62,"snum":"0831913"},{"ID":100,"snum":"169368"},{"ID":99,"snum":"169387"},{"ID":111,"snum":"169542"},{"ID":86,"snum":"199468"},{"ID":102,"snum":"199996"},{"ID":91,"snum":"340834"},{"ID":67,"snum":"340995"},{"ID":81,"snum":"564278"},{"ID":113,"snum":"564476"},{"ID":74,"snum":"564715"},{"ID":77,"snum":"565300"},{"ID":65,"snum":"565644"},{"ID":60,"snum":"565760"},{"ID":76,"snum":"6566080"},{"ID":59,"snum":"675429"},{"ID":104,"snum":"675655"},{"ID":69,"snum":"676110"},{"ID":114,"snum":"676607"},{"ID":94,"snum":"676846"},{"ID":96,"snum":"791006"},{"ID":85,"snum":"791219"},{"ID":75,"snum":"837238"},{"ID":70,"snum":"837456"},{"ID":83,"snum":"837459"},{"ID":72,"snum":"837483"},{"ID":66,"snum":"837775"}]<div id="delugesiphon-modal-gabdloknkpdefdpkkibplcfnkngbidim"></div></body></html>

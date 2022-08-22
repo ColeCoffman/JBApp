@@ -18,6 +18,8 @@ import { GeneralRaffleScreen } from './Screens/GeneralRaffleScreen';
 import { LargeItemScreen } from './Screens/LargeItemScreen';
 import { ScavengerHuntScreen } from './Screens/ScavengerHuntScreen';
 import { RaffleRulesScreen } from './Screens/RaffleRulesScreen';
+import { BoosterVipEventScreen } from './Screens/BoosterVipEventScreen';
+import { KidsEventScreen } from './Screens/KidsEventScreen';
 
 import {CombinedDefaultTheme, CombinedDarkTheme } from './style';
 
@@ -67,6 +69,8 @@ function MyDrawer() {
       <Drawer.Screen name="Large Item" component={LargeItemScreen} />
       <Drawer.Screen name="Scavenger Hunt" component={ScavengerHuntScreen} />
       <Drawer.Screen name="Raffle Rules" component={RaffleRulesScreen} />
+      <Drawer.Screen name="Booster/Vip Events" component={BoosterVipEventScreen} />
+      <Drawer.Screen name="Kids Club Events" component={KidsEventScreen} />
     </Drawer.Navigator>
   );
 }
@@ -111,7 +115,6 @@ export default function App() {
   useEffect(() => {
     registerForPushNotificationsAsync().then(token => {
       setExpoPushToken(token);
-      console.log("TOKEN: " + expoPushToken);
     });
 
     // This listener is fired whenever a notification is received while the app is foregrounded

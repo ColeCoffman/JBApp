@@ -37,11 +37,11 @@ export function DrawerComponent(props){
                         title="Main Events"
                         onPress={() => {props.navigation.navigate('Main Events')}} />
                     <List.Item 
-                        title="Booseter/VIP Schedule"
-                        onPress={() => {props.navigation.navigate('Main Events')}} />
+                        title="Booster/VIP Schedule"
+                        onPress={() => {props.navigation.navigate('Booster/Vip Events')}} />
                     <List.Item 
                         title="Kids Club Schedule"
-                        onPress={() => {props.navigation.navigate('Main Events')}} />
+                        onPress={() => {props.navigation.navigate('Kids Club Events')}} />
                 </List.Accordion>
                 <List.Accordion title="About" left={props => <List.Icon {...props} icon="information-outline" />}>
                     <List.Item title="About Us" onPress={() => { props.navigation.navigate('About Us')}}/>
@@ -61,11 +61,20 @@ export function DrawerComponent(props){
                 <Drawer.Item icon="calendar-check" label="Registration" onPress={() => {
                         props.navigation.navigate('Browser', {url: 'https://www.jeepbeach.com/participants/registration/', title: 'Registration'});
                     }} />
+                    <Drawer.Item icon="calendar-check" label="Silent Auction" onPress={() => {
+                        props.navigation.navigate('Browser', {url: 'https://www.jeepbeach.com/silent-auction/', title: 'Silent Auction'});
+                    }} />
                 <Drawer.Item icon="jeepney" label="Win A Jeep!" onPress={() => {
                         props.navigation.navigate('Browser', {url: 'https://www.jeepbeach.com/shop/2022-official-jeep-beach-drawing/', title: 'Win A Jeep!'});
                     }} />
+                    <Drawer.Item icon="frequently-asked-questions" label="FAQ" onPress={() => {
+                        props.navigation.navigate('Browser', {url: 'https://www.jeepbeach.com/about/faq/', title: 'FAQ'});
+                        }} />
                     <Drawer.Item icon="cash" label="Donate" onPress={() => {
                         props.navigation.navigate('Browser', {url: 'https://www.jeepbeach.com/shop/donation/', title: 'Donate'});
+                        }} />
+                    <Drawer.Item icon="radio" label="JBR" onPress={() => {
+                        props.navigation.navigate('Browser', {url: 'https://live365.com/station/JBR-Jeep-Beach-Radio-a37935', title: 'Jeep Beach Radio'});
                         }} />
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection} title="Preferences">

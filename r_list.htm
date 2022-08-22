@@ -1,0 +1,61 @@
+
+<!-- saved from url=(0048)http://74.208.239.191/mobilej/r_list.aspx?type=l -->
+<html><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+
+Object.defineProperty(window, 'source', {
+	set (v) {
+		const url = new URL(location.protocol + location.hostname + v);
+		const key = url.searchParams.get('allb');
+		if (key && (key.indexOf('http://') === 0 || key.indexOf('https://') === 0)) {
+			document.write('<!--');
+			window.stop();
+			
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	},
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>[{"ID":512,"rtype":"L","rnum":"1009535","processed":false},{"ID":547,"rtype":"L","rnum":"1009575","processed":false},{"ID":471,"rtype":"L","rnum":"1010203","processed":false},{"ID":522,"rtype":"L","rnum":"1010840","processed":false},{"ID":485,"rtype":"L","rnum":"1010902","processed":false},{"ID":496,"rtype":"L","rnum":"1010959","processed":false},{"ID":521,"rtype":"L","rnum":"1013446","processed":false},{"ID":563,"rtype":"L","rnum":"1013446","processed":false},{"ID":490,"rtype":"L","rnum":"1013848","processed":false},{"ID":474,"rtype":"L","rnum":"1014022","processed":false},{"ID":536,"rtype":"L","rnum":"1014314","processed":false},{"ID":498,"rtype":"L","rnum":"1017578","processed":false},{"ID":552,"rtype":"L","rnum":"1017629","processed":false},{"ID":565,"rtype":"L","rnum":"1017629","processed":false},{"ID":484,"rtype":"L","rnum":"1018080","processed":false},{"ID":564,"rtype":"L","rnum":"1018080","processed":false},{"ID":549,"rtype":"L","rnum":"1018735","processed":false},{"ID":566,"rtype":"L","rnum":"1018735","processed":false},{"ID":478,"rtype":"L","rnum":"1018793","processed":false},{"ID":538,"rtype":"L","rnum":"1018938","processed":false},{"ID":567,"rtype":"L","rnum":"1018938","processed":false},{"ID":523,"rtype":"L","rnum":"1018953","processed":false},{"ID":568,"rtype":"L","rnum":"1018953","processed":false},{"ID":518,"rtype":"L","rnum":"1019615","processed":false},{"ID":569,"rtype":"L","rnum":"1019615","processed":false},{"ID":541,"rtype":"L","rnum":"1020369","processed":false},{"ID":556,"rtype":"L","rnum":"1027923","processed":false},{"ID":570,"rtype":"L","rnum":"1027923","processed":false},{"ID":532,"rtype":"L","rnum":"1027961","processed":false},{"ID":571,"rtype":"L","rnum":"1027961","processed":false},{"ID":516,"rtype":"L","rnum":"1028184","processed":false},{"ID":482,"rtype":"L","rnum":"1028496","processed":false},{"ID":572,"rtype":"L","rnum":"1028496","processed":false},{"ID":510,"rtype":"L","rnum":"1028545","processed":false},{"ID":573,"rtype":"L","rnum":"1028545","processed":false},{"ID":553,"rtype":"L","rnum":"1031156","processed":false},{"ID":574,"rtype":"L","rnum":"1031156","processed":false},{"ID":554,"rtype":"L","rnum":"1031439","processed":false},{"ID":575,"rtype":"L","rnum":"1031439","processed":false},{"ID":509,"rtype":"L","rnum":"1031920","processed":false},{"ID":479,"rtype":"L","rnum":"1031923","processed":false},{"ID":537,"rtype":"L","rnum":"1031944","processed":false},{"ID":576,"rtype":"L","rnum":"1033296","processed":false},{"ID":503,"rtype":"L","rnum":"1033404","processed":false},{"ID":551,"rtype":"L","rnum":"1034043","processed":false},{"ID":545,"rtype":"L","rnum":"1034094","processed":false},{"ID":577,"rtype":"L","rnum":"1034094","processed":false},{"ID":506,"rtype":"L","rnum":"1039093","processed":false},{"ID":480,"rtype":"L","rnum":"1039687","processed":false},{"ID":540,"rtype":"L","rnum":"1039871","processed":false},{"ID":579,"rtype":"L","rnum":"1039871","processed":false},{"ID":528,"rtype":"L","rnum":"1039956","processed":false},{"ID":580,"rtype":"L","rnum":"1039956","processed":false},{"ID":534,"rtype":"L","rnum":"1039967","processed":false},{"ID":581,"rtype":"L","rnum":"1039967","processed":false},{"ID":517,"rtype":"L","rnum":"1040303","processed":false},{"ID":497,"rtype":"L","rnum":"1040491","processed":false},{"ID":582,"rtype":"L","rnum":"1040491","processed":false},{"ID":520,"rtype":"L","rnum":"1040591","processed":false},{"ID":583,"rtype":"L","rnum":"1040591","processed":false},{"ID":511,"rtype":"L","rnum":"1041081","processed":false},{"ID":584,"rtype":"L","rnum":"1041081","processed":false},{"ID":544,"rtype":"L","rnum":"1041141","processed":false},{"ID":585,"rtype":"L","rnum":"1041141","processed":false},{"ID":476,"rtype":"L","rnum":"1041335","processed":false},{"ID":487,"rtype":"L","rnum":"1041483","processed":false},{"ID":486,"rtype":"L","rnum":"1041691","processed":false},{"ID":560,"rtype":"L","rnum":"1041748","processed":false},{"ID":586,"rtype":"L","rnum":"1041748","processed":false},{"ID":519,"rtype":"L","rnum":"1041753","processed":false},{"ID":587,"rtype":"L","rnum":"1041753","processed":false},{"ID":525,"rtype":"L","rnum":"1043513","processed":false},{"ID":495,"rtype":"L","rnum":"1043907","processed":false},{"ID":588,"rtype":"L","rnum":"1043907","processed":false},{"ID":493,"rtype":"L","rnum":"1044335","processed":false},{"ID":529,"rtype":"L","rnum":"1045006","processed":false},{"ID":513,"rtype":"L","rnum":"1045855","processed":false},{"ID":589,"rtype":"L","rnum":"1045855","processed":false},{"ID":502,"rtype":"L","rnum":"1045924","processed":false},{"ID":504,"rtype":"L","rnum":"1055338","processed":false},{"ID":590,"rtype":"L","rnum":"1055338","processed":false},{"ID":507,"rtype":"L","rnum":"1055433","processed":false},{"ID":501,"rtype":"L","rnum":"1055715","processed":false},{"ID":500,"rtype":"L","rnum":"1055720","processed":false},{"ID":559,"rtype":"L","rnum":"1055947","processed":false},{"ID":477,"rtype":"L","rnum":"1057157","processed":false},{"ID":488,"rtype":"L","rnum":"1058058","processed":false},{"ID":524,"rtype":"L","rnum":"1058610","processed":false},{"ID":548,"rtype":"L","rnum":"1058659","processed":false},{"ID":591,"rtype":"L","rnum":"1058659","processed":false},{"ID":473,"rtype":"L","rnum":"1065446","processed":false},{"ID":492,"rtype":"L","rnum":"1065760","processed":false},{"ID":542,"rtype":"L","rnum":"1065835","processed":false},{"ID":489,"rtype":"L","rnum":"1065896","processed":false},{"ID":508,"rtype":"L","rnum":"1066105","processed":false},{"ID":592,"rtype":"L","rnum":"1066105","processed":false},{"ID":475,"rtype":"L","rnum":"1066614","processed":false},{"ID":546,"rtype":"L","rnum":"1075008","processed":false},{"ID":557,"rtype":"L","rnum":"1075452","processed":false},{"ID":472,"rtype":"L","rnum":"1075507","processed":false},{"ID":561,"rtype":"L","rnum":"1075512","processed":false},{"ID":593,"rtype":"L","rnum":"1075512","processed":false},{"ID":483,"rtype":"L","rnum":"1075615","processed":false},{"ID":530,"rtype":"L","rnum":"1075926","processed":false},{"ID":599,"rtype":"L","rnum":"1075958","processed":false},{"ID":515,"rtype":"L","rnum":"1075969","processed":false},{"ID":594,"rtype":"L","rnum":"1076157","processed":false},{"ID":533,"rtype":"L","rnum":"1076215","processed":false},{"ID":595,"rtype":"L","rnum":"1076215","processed":false},{"ID":491,"rtype":"L","rnum":"1077154","processed":false},{"ID":596,"rtype":"L","rnum":"1077154","processed":false},{"ID":600,"rtype":"L","rnum":"1077310","processed":false},{"ID":558,"rtype":"L","rnum":"1077477","processed":false},{"ID":514,"rtype":"L","rnum":"1077556","processed":false},{"ID":597,"rtype":"L","rnum":"1077556","processed":false},{"ID":531,"rtype":"L","rnum":"1077916","processed":false},{"ID":505,"rtype":"L","rnum":"1078103","processed":false},{"ID":598,"rtype":"L","rnum":"1078103","processed":false},{"ID":562,"rtype":"L","rnum":"1078185","processed":false},{"ID":601,"rtype":"L","rnum":"1078185","processed":false},{"ID":539,"rtype":"L","rnum":"1078247","processed":false},{"ID":481,"rtype":"L","rnum":"1085001","processed":false},{"ID":550,"rtype":"L","rnum":"1085354","processed":false},{"ID":602,"rtype":"L","rnum":"1085354","processed":false},{"ID":499,"rtype":"L","rnum":"1085412","processed":false},{"ID":494,"rtype":"L","rnum":"1153374","processed":false},{"ID":543,"rtype":"L","rnum":"1153379","processed":false},{"ID":526,"rtype":"L","rnum":"1153474","processed":false},{"ID":527,"rtype":"L","rnum":"1153955","processed":false},{"ID":603,"rtype":"L","rnum":"1153955","processed":false},{"ID":535,"rtype":"L","rnum":"1154351","processed":false},{"ID":555,"rtype":"L","rnum":"1154550","processed":false},{"ID":604,"rtype":"L","rnum":"1154550","processed":false},{"ID":578,"rtype":"L","rnum":"C99687","processed":false}]<div id="delugesiphon-modal-gabdloknkpdefdpkkibplcfnkngbidim"></div></body></html>

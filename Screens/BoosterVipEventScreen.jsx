@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 
 let { width } = Dimensions.get('window')
 
-function MainEventScreen({navigation}) {
+function BoosterVipEventScreen({navigation}) {
     const [isLoading, setIsLoading] = React.useState(true);
     const [events, setEvents] = React.useState([]);
     const [modalVisible, setModalVisible] = useState(false);
@@ -15,7 +15,7 @@ function MainEventScreen({navigation}) {
     refreshEvents.bind(this);
   
     function refreshEvents(){
-      fetch('https://sk8server.me/api/events/readMain.php',{
+      fetch('https://sk8server.me/api/events/readVip.php',{
         method: 'GET',
         headers: ({
           'Accept': 'application/json',
@@ -30,7 +30,7 @@ function MainEventScreen({navigation}) {
       });
     }
   
-    MainEventScreen.refreshEvents = refreshEvents;
+    BoosterVipEventScreen.refreshEvents = refreshEvents;
   
     React.useLayoutEffect(() => {
       navigation.setOptions({
@@ -48,7 +48,7 @@ function MainEventScreen({navigation}) {
     }, [JSON.stringify(events)])
   
     function handleEventPress(event){
-      // console.log(event);
+      console.log(event);
       setSelectedEvent(event);
       setModalVisible(true);
     }
@@ -82,24 +82,19 @@ function MainEventScreen({navigation}) {
                     <Text style={{fontWeight: 'normal'}}> {selectedEvent['Location']}</Text>
                   </Text>
                   }
-                  {selectedEvent['Sponsored By'] != null && 
-                    <Text style={styles.label}> Sponsored By: 
-                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Sponsored By']}</Text>
+                  {selectedEvent['info'] != null && 
+                    <Text style={styles.label}> Info: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['info']}</Text>
                   </Text>
                   }
-                  {selectedEvent['Powered By'] != null && 
-                    <Text style={styles.label}> Powered By: 
-                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Powered By']}</Text>
+                  {selectedEvent['hospitality'] != null && 
+                    <Text style={styles.label}> Hospitality: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['hospitality']}</Text>
                   </Text>
                   }
-                  {selectedEvent['description'] != null && 
-                    <Text style={styles.label}> Description: 
-                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['description']}</Text>
-                  </Text>
-                  }
-                  {selectedEvent['Register'] != null && 
-                    <Text style={styles.label}> Register: 
-                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['Register']}</Text>
+                  {selectedEvent['parking'] != null && 
+                    <Text style={styles.label}> Parking: 
+                    <Text style={{fontWeight: 'normal'}}> {selectedEvent['parking']}</Text>
                   </Text>
                   }
 
@@ -111,7 +106,7 @@ function MainEventScreen({navigation}) {
         eventTapped={(event) => handleEventPress(event)}
         events={events}
         width={width}
-        initDate={'2022-04-24'}
+        initDate={'2022-04-25'}
       />
       </>
       
@@ -174,4 +169,4 @@ function MainEventScreen({navigation}) {
     }
   });
 
-export {MainEventScreen};
+export {BoosterVipEventScreen};
